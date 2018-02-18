@@ -1,10 +1,278 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Hello，Beetl</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>秒天娱乐</title>
+    <!-- Font Awesome -->
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"-->
+    <!-- Bootstrap core CSS -->
+    <link href="${framePath}/mdbootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="${framePath}/mdbootstrap/css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="${cssPath}/main.css" rel="stylesheet">
 </head>
+
 <body>
-${name},success!
+
+    <!-- Main Navigation -->
+    <header>
+
+	<!--Navbar-->
+	<nav class="navbar navbar-expand-lg navbar-dark indigo">
+
+	    <!-- Navbar brand -->
+	    <a class="navbar-brand" href="#">妙天</a>
+
+	    <!-- Collapse button -->
+	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+	        aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+	    <!-- Collapsible content -->
+	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+	        <!-- Links -->
+	        <ul class="navbar-nav mr-auto">
+	            <li class="nav-item active">
+	                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+	            </li>
+	            <li class="nav-item">
+	                <a class="nav-link" href="#">Features</a>
+	            </li>
+	            <li class="nav-item">
+	                <a class="nav-link" href="#">Pricing</a>
+	            </li>
+
+	            <!-- Dropdown -->
+	            <li class="nav-item dropdown">
+	                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+	                <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+	                    <a class="dropdown-item" href="#">Action</a>
+	                    <a class="dropdown-item" href="#">Another action</a>
+	                    <a class="dropdown-item" href="#">Something else here</a>
+	                </div>
+	            </li>
+
+	        </ul>
+	        <!-- Links -->
+
+	        <!-- Search form -->
+	       <!--  <form class="form-inline">
+	           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+	       </form> -->
+	    </div>
+	    <!-- Collapsible content -->
+
+	</nav>
+	<!--/.Navbar-->     
+    	
+    </header>
+    <!-- Main Navigation -->
+
+    <!-- Main Layout -->
+    <main>
+    <!-- Main Container -->
+	    <div class="container">
+	    	<div class="row">
+	    		<div class="col-md-7 mt-3">
+	    			<img src="${imagePath}/index/banner.jpg" alt="banner" class="img-fluid">
+	    		</div>
+	    		<div class="col-md-5 mt-3">
+	    			<h2>2018年春晚</h2>
+	    			<hr>
+	    			<p>
+	    			晚会以“喜庆新时代、共筑中国梦”为主题，荟萃歌曲、舞蹈、戏曲、小品、相声、武术、杂技等艺术形式，集聚中外艺术家的精彩表演，生动展示中国共产党第十八次全国代表大会以来中国共产党和中国国家事业的历史性成就、历史性变革，展望决胜全面建成小康社会、全面建设社会主义现代化国家的光明前景，弘扬中国精神、中国价值、中国力量。
+	    			</p>
+	    			<a href="google.com" class="btn btn-primary">查看详情</a>
+	    		</div>
+	    	</div>
+	    	<div class="row">
+	    		<div class="col-md-4 mt-3">
+	    			<!--Card-->
+					<div class="card">
+
+					    <!--Card image-->
+					    <div class="view overlay hm-white-slight">
+					        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg" class="img-fluid" alt="">
+					        <a href="#">
+					            <div class="mask"></div>
+					        </a>
+					    </div>
+
+					    <!--Card content-->
+					    <div class="card-body">
+					        <!--Title-->
+					        <h4 class="card-title">Card title</h4>
+					        <!--Text-->
+					        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					        <a href="#" class="btn btn-primary">Button</a>
+					    </div>
+
+					</div>
+					<!--/.Card-->
+	    		</div>
+	    		<div class="col-md-4 mt-3">
+	    			<!--Card-->
+	    			<div class="card">
+
+					    <!--Card image-->
+					    <div class="view overlay hm-white-slight">
+					        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg" class="img-fluid" alt="">
+					        <a href="#">
+					            <div class="mask"></div>
+					        </a>
+					    </div>
+
+					    <!--Card content-->
+					    <div class="card-body">
+					        <!--Title-->
+					        <h4 class="card-title">Card title</h4>
+					        <!--Text-->
+					        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					        <a href="#" class="btn btn-primary">Button</a>
+					    </div>
+
+					</div>
+					<!--/.Card-->
+				</div>
+	    		<div class="col-md-4 mt-3">
+	    			<!--Card-->
+	    			<div class="card">
+
+					    <!--Card image-->
+					    <div class="view overlay hm-white-slight">
+					        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg" class="img-fluid" alt="">
+					        <a href="#">
+					            <div class="mask"></div>
+					        </a>
+					    </div>
+
+					    <!--Card content-->
+					    <div class="card-body">
+					        <!--Title-->
+					        <h4 class="card-title">Card title</h4>
+					        <!--Text-->
+					        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					        <a href="#" class="btn btn-primary">Button</a>
+					    </div>
+
+					</div>
+					<!--/.Card-->
+	    		</div>
+	    		
+	    	</div>	    	
+	    </div>
+    <!-- Main Container -->    	
+    </main>
+    <!-- Main Layout -->
+
+	<!--Footer-->
+	<footer class="page-footer center-on-small-only unique-color-dark pt-0">
+
+	    <div style="background-color: #6351ce;">
+	        <div class="container">
+	            <!--Grid row-->
+	            <div class="row py-4 d-flex align-items-center">
+
+	                <!--Grid column-->
+	                <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+	                    <h6 class="mb-0 white-text">Get connected with us on social networks!</h6>
+	                </div>
+	                <!--Grid column-->
+
+	                <!--Grid column-->
+	                <div class="col-md-6 col-lg-7 text-center text-md-right">
+	                    <!--Facebook-->
+	                    <a class="icons-sm fb-ic ml-0"><i class="fa fa-facebook white-text mr-lg-4"> </i></a>
+	                    <!--Twitter-->
+	                    <a class="icons-sm tw-ic"><i class="fa fa-twitter white-text mr-lg-4"> </i></a>
+	                    <!--Google +-->
+	                    <a class="icons-sm gplus-ic"><i class="fa fa-google-plus white-text mr-lg-4"> </i></a>
+	                    <!--Linkedin-->
+	                    <a class="icons-sm li-ic"><i class="fa fa-linkedin white-text mr-lg-4"> </i></a>
+	                    <!--Instagram-->
+	                    <a class="icons-sm ins-ic"><i class="fa fa-instagram white-text mr-lg-4"> </i></a>
+	                </div>
+	                <!--Grid column-->
+
+	            </div>
+	            <!--Grid row-->
+	        </div>
+	    </div>
+
+	    <!--Footer Links-->
+	    <div class="container mt-5 mb-4 text-center text-md-left">
+	        <div class="row mt-3">
+
+	            <!--First column-->
+	            <div class="col-md-3 col-lg-4 col-xl-3 mb-r">
+	                <h6 class="title font-bold"><strong>Company name</strong></h6>
+	                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+	                <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit
+	                    amet, consectetur adipisicing elit.</p>
+	            </div>
+	            <!--/.First column-->
+
+	            <!--Second column-->
+	            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-r">
+	                <h6 class="title font-bold"><strong>Products</strong></h6>
+	                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+	                <p><a href="#!">MDBootstrap</a></p>
+	                <p><a href="#!">MDWordPress</a></p>
+	                <p><a href="#!">BrandFlow</a></p>
+	                <p><a href="#!">Bootstrap Angular</a></p>
+	            </div>
+	            <!--/.Second column-->
+
+	            <!--Third column-->
+	            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-r">
+	                <h6 class="title font-bold"><strong>Useful links</strong></h6>
+	                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+	                <p><a href="#!">Your Account</a></p>
+	                <p><a href="#!">Become an Affiliate</a></p>
+	                <p><a href="#!">Shipping Rates</a></p>
+	                <p><a href="#!">Help</a></p>
+	            </div>
+	            <!--/.Third column-->
+
+	            <!--Fourth column-->
+	            <div class="col-md-4 col-lg-3 col-xl-3">
+	                <h6 class="title font-bold"><strong>Contact</strong></h6>
+	                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+	                <p><i class="fa fa-home mr-3"></i> New York, NY 10012, US</p>
+	                <p><i class="fa fa-envelope mr-3"></i> info@example.com</p>
+	                <p><i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
+	                <p><i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
+	            </div>
+	            <!--/.Fourth column-->
+
+	        </div>
+	    </div>
+	    <!--/.Footer Links-->
+
+	    <!-- Copyright-->
+	    <div class="footer-copyright">
+	        <div class="container-fluid">
+	            © 2018 Copyright: <a href="https://www.MUTOPIA.com"><strong> MUTOPIA.com</strong></a>
+	        </div>
+	    </div>
+	    <!--/.Copyright -->
+	    
+	</footer>
+	<!--/.Footer-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="${framePath}/mdbootstrap/js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="${framePath}/mdbootstrap/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="${framePath}/mdbootstrap/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="${framePath}/mdbootstrap/js/mdb.min.js"></script>
 </body>
+
 </html>

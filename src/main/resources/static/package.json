@@ -1,0 +1,12 @@
+{
+  "name": "mutopia",
+  "version": "1.0.0",
+  "description": "mutopia",
+  "main": "index.js",
+  "repository": "https://github.com/francisliyy/mutopia-busiweb.git",
+  "author": "yingxin li",
+  "license": "MIT",
+  "dependencies": {
+    "mdbootstrap": "^4.4.4"
+  }
+}
