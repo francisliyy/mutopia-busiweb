@@ -5,13 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>秒天娱乐</title>
+    <title>妙天娱乐</title>
     <!-- Font Awesome -->
     <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"-->
     <!-- Bootstrap core CSS -->
     <link href="${framePath}/mdbootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="${framePath}/mdbootstrap/css/mdb.min.css" rel="stylesheet">
+    <!-- fontawesome styles -->
+    <link href="${cssPath}/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="${cssPath}/main.css" rel="stylesheet">
 </head>
@@ -25,7 +27,10 @@
 	<nav class="navbar navbar-expand-lg navbar-dark indigo">
 
 	    <!-- Navbar brand -->
-	    <a class="navbar-brand" href="#">妙天</a>
+	    <a class="navbar-brand" href="#">
+	        <img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" height="30" class="d-inline-block align-top" alt="">
+	        Bootstrap
+	    </a>
 
 	    <!-- Collapse button -->
 	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -57,6 +62,15 @@
 	            </li>
 
 	        </ul>
+	        <ul class="nav navbar-nav nav-flex-icons ml-auto">
+		        <!-- Login / register -->
+                <li class="nav-item ">
+                	<a href="#" id="navbar-static-login" class="nav-link waves-effect waves-light">
+                		<i class="fas fa-sign-in-alt fa-fw"></i>
+                		<span class="clearfix d-none d-sm-inline-block">Log In</span>
+                	</a>
+                </li>
+            </ul>
 	        <!-- Links -->
 
 	        <!-- Search form -->
