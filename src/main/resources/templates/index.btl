@@ -342,6 +342,12 @@
                                     <label for="form24">您的手机号</label>
                                 </div>    
                                 <div class="md-form form-sm">
+                                    <i class="fa fa-key prefix"></i>
+                                    <input type="text" id="form24" class="form-control" style="width: 60%">
+                                    <label for="form24">短信验证码</label>
+                                    <a id="msg-btn" href="#" class="btn btn-primary">获取验证码</a>
+                                </div>
+                                <div class="md-form form-sm">
                                     <i class="fa fa-lock prefix"></i>
                                     <input type="password" id="form25" class="form-control">
                                     <label for="form25">您的密码</label>
