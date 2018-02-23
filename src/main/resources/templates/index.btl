@@ -336,33 +336,35 @@
     
                             <!--Body-->
                             <div class="modal-body">
-                                <div class="md-form form-sm">
-                                    <i class="fa fa-mobile prefix"></i>
-                                    <input type="text" id="form24" class="form-control">
-                                    <label for="form24">您的手机号</label>
-                                </div>    
-                                <div class="md-form form-sm">
-                                    <i class="fa fa-key prefix"></i>
-                                    <input type="text" id="form24" class="form-control" style="width: 60%">
-                                    <label for="form24">短信验证码</label>
-                                    <a id="msg-btn" href="#" class="btn btn-primary">获取验证码</a>
-                                </div>
-                                <div class="md-form form-sm">
-                                    <i class="fa fa-lock prefix"></i>
-                                    <input type="password" id="form25" class="form-control">
-                                    <label for="form25">您的密码</label>
-                                </div>
-    
-                                <div class="md-form form-sm">
-                                    <i class="fa fa-lock prefix"></i>
-                                    <input type="password" id="form26" class="form-control">
-                                    <label for="form26">再次输入密码</label>
-                                </div>
-    
-                                <div class="text-center form-sm mt-2">
-                                    <button class="btn btn-info">立即注册 <i class="fa fa-sign-in ml-1"></i></button>
-                                </div>
-    
+	                            <form id="register_from">
+	                                <div class="md-form form-sm">
+	                                    <i class="fa fa-mobile prefix"></i>
+	                                    <input type="text" id="regisetr_mobile" name="regisetr_mobile" class="form-control">
+	                                    <label for="regisetr_mobile">您的手机号</label>
+	                                </div>    
+	                                <div class="md-form form-sm">
+	                                    <i class="fa fa-key prefix"></i>
+	                                    <input type="text" id="register_msg" name="register_msg" class="form-control" style="width: 60%">
+	                                    <label for="register_msg">短信验证码</label>
+	                                    <a id="msg-btn" href="#" class="btn btn-primary">获取验证码</a>
+	                                </div>
+	                                <div class="md-form form-sm">
+	                                    <i class="fa fa-lock prefix"></i>
+	                                    <input type="password" id="register_pwd" name="register_pwd" class="form-control">
+	                                    <label for="register_pwd">您的密码</label>
+	                                </div>
+	    
+	                                <div class="md-form form-sm">
+	                                    <i class="fa fa-lock prefix"></i>
+	                                    <input type="password" id="register_repwd" name="register_repwd" class="form-control">
+	                                    <label for="register_repwd">再次输入密码</label>
+	                                </div>
+                                
+	                                <div class="text-center form-sm mt-2">
+	                                    <button class="btn btn-info">立即注册 <i class="fa fa-sign-in ml-1"></i></button>
+	                                </div>
+
+	                             </form>
                             </div>
                             <!--Footer-->
                             <div class="modal-footer">
@@ -391,6 +393,13 @@
     <script type="text/javascript" src="${framePath}/mdbootstrap/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="${framePath}/mdbootstrap/js/mdb.min.js"></script>
+    <!-- JQuery validate -->
+    <script type="text/javascript" src="${framePath}/jquery-validation/dist/jquery.validate.min.js"></script>
+    <!-- JQuery validate ZH-->
+    <script type="text/javascript" src="${framePath}/jquery-validation/dist/localization/messages_zh.js"></script>
+    <!-- JQuery validate ZH-->
+    <script type="text/javascript" src="${jsPath}/index.js"></script>
 </body>
 
 </html>
+
