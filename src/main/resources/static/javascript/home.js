@@ -40,11 +40,7 @@
 	        equalTo: "两次密码输入不一致"
 	      }
 	     },
-	     submitHandler:function(form){
-            alert("submitted");   
-            console.log($("#register_from").find('label'));
-            $("#register_from").find('label').remove();
-            //form.submit();
+	    submitHandler:function(form){
         },
         errorPlacement: function(error, element) {
 			// Append error within linked label
@@ -55,4 +51,20 @@
 		},
 		errorElement: "span",
     });
-})
+
+    $('#msg-btn').on('click', function(event) {
+    	event.preventDefault();
+    	var isValid = $("#register_from").validate().element("#regisetr_mobile");
+    	if(isValid){
+    		$.ajax({
+	    		url: ContextPath + '/user/smsRegister/'+$("#regisetr_mobile").val(),
+	    		type: 'GET'
+	    	})
+	    	.done(function(result) {
+	    		if(result==="1"){
+	    			$("#msg_label").val("短信已发送，请查收！");
+	    		}    		
+	    	})
+    	}
+    });
+});

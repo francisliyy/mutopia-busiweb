@@ -385,6 +385,9 @@
     <!--Modal: Login / Register Form-->
 
     <!-- SCRIPTS -->
+    <script type="text/javascript">
+    	var ContextPath = "${contextPath}";
+    </script>
     <!-- JQuery -->
     <script type="text/javascript" src="${framePath}/mdbootstrap/js/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap tooltips -->
@@ -400,8 +403,7 @@
     <!-- JQuery validate -->
     <script type="text/javascript" src="${framePath}/jquery-validation/dist/localization/messages_zh.js"></script>
     <!-- JQuery validate ZH-->
-    <script type="text/javascript" src="${jsPath}/index.js"></script>
+    <script type="text/javascript" src="${jsPath}/home.js"></script>
 </body>
 
 </html>
-

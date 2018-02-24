@@ -26,6 +26,7 @@ public class GlobalExt implements WebRenderExt{
 		String jsPath = contextPath+"/javascript";
 		String imagePath = contextPath+"/images";
 		
+		template.binding("contextPath", contextPath);
 		template.binding("framePath", framePath);
 		template.binding("cssPath", cssPath);
 		template.binding("jsPath", jsPath);

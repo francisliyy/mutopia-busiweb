@@ -11,21 +11,19 @@ package com.mutopia.busiweb.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("/beetl")
-public class BeetlController {
+public class HomeController {
 	
-	@RequestMapping("/index.html")
+	@RequestMapping("/home.html")
 	public  String say(Model model){
 		model.addAttribute("name","hello,world");
-		return "/index.btl";
+		return "/home.btl";
 	}
 	
-	@RequestMapping("")
+	/*@RequestMapping("")
 	public @ ResponseBody String sayHello(Model model){		
 		return "hello";
-	}
+	}*/
 
 }
