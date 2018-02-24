@@ -395,7 +395,9 @@
     <script type="text/javascript" src="${framePath}/mdbootstrap/js/mdb.min.js"></script>
     <!-- JQuery validate -->
     <script type="text/javascript" src="${framePath}/jquery-validation/dist/jquery.validate.min.js"></script>
-    <!-- JQuery validate ZH-->
+    <!-- JQuery validate -->
+    <script type="text/javascript" src="${framePath}/jquery-validation/dist/additional-methods.js"></script>
+    <!-- JQuery validate -->
     <script type="text/javascript" src="${framePath}/jquery-validation/dist/localization/messages_zh.js"></script>
     <!-- JQuery validate ZH-->
     <script type="text/javascript" src="${jsPath}/index.js"></script>

@@ -5,40 +5,40 @@
 		rules: {
 	      regisetr_mobile: {
 	        required: true,
-	        //chinaMobile：true,
-	        minlength: 11
+	        chinaMobile: true,
 	      },
 	      register_msg: {
 	        required: true,
-	        minlength: 2
+	        rangelength: [6,6]
 	      },
 	      register_pwd: {
 	        required: true,
-	        minlength: 5
+	        minlength: 6
 	      },
 	      register_repwd: {
 	        required: true,
-	        minlength: 5,
-	        equalTo: "#password"
+	        minlength: 6,
+	        equalTo: "#register_pwd"
 	      },
 	    },
 	    messages: {
 	      regisetr_mobile: {
 	        required: "(请输入中国大陆手机号)",
-	        minlength: "(用户名必需由两个字母组成)"
+	        chinaMobile: "(请输入11位中国大陆手机号)"
+	      },
+	      register_msg: {
+	        required: "请输入短信验证码",
+	        rangelength: "请输入6位短信验证码"
 	      },
 	      password: {
 	        required: "请输入密码",
-	        minlength: "密码长度不能小于 5 个字母"
+	        minlength: "密码长度不能小于 6 个字母"
 	      },
 	      confirm_password: {
 	        required: "请输入密码",
-	        minlength: "密码长度不能小于 5 个字母",
+	        minlength: "密码长度不能小于 6 个字母",
 	        equalTo: "两次密码输入不一致"
-	      },
-	      email: "请输入一个正确的邮箱",
-	      agree: "请接受我们的声明",
-	      topic: "请选择两个主题"
+	      }
 	     },
 	     submitHandler:function(form){
             alert("submitted");   
