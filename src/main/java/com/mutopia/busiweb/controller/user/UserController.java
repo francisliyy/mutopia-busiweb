@@ -20,19 +20,6 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/user")
 public class UserController {
 	
-	@Autowired
-    private Environment env;
 	
-	@GetMapping("/smsRegister/{mobile}")
-	public String smsRegister(@PathVariable String mobile) {
-		
-		RestTemplate restTemplate = new RestTemplate();
-		
-		String url = this.env.getProperty("mutopia.sysmgt.system")+"/user/smsRegister/{mobile}";
-		
-		String verifycode = restTemplate.getForObject(url, String.class, mobile);
-
-		return verifycode;
-	}
 
 }

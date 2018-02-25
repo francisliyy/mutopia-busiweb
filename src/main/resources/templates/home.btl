@@ -359,9 +359,12 @@
 	                                    <input type="password" id="register_repwd" name="register_repwd" class="form-control">
 	                                    <label for="register_repwd">再次输入密码</label>
 	                                </div>
+	                                <div class="md-form form-sm">
+	                                    <ul id="register_error" style="color: red"></ul>
+	                                </div>
                                 
 	                                <div class="text-center form-sm mt-2">
-	                                    <button class="btn btn-info">立即注册 <i class="fa fa-sign-in ml-1"></i></button>
+	                                    <button id="register-btn" class="btn btn-info">立即注册 <i class="fa fa-sign-in ml-1"></i></button>
 	                                </div>
 
 	                             </form>

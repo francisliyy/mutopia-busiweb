@@ -85,4 +85,27 @@
 	    	})
     	}
     });
+
+    $("#register-btn").on('click', function(event) {
+    	$("#register_error li").remove();
+    	event.preventDefault();
+    	var param = {"mobile": $("#regisetr_mobile").val(),
+    			   "verifycode": $("#register_msg").val(),
+    			   "password": $("#register_pwd").val()};
+    	$.ajax({
+    		url: SysMgt_Path + '/user/initCreationFormByMobile',
+    		type: 'POST',
+    		contentType : "application/json",
+    		data: JSON.stringify(param),
+    	})
+    	.done(function(result) {
+    		typeof result === 'string' && $("#register_error").html(result);
+    	}).fail(function(error) {
+    		console.log(error);
+    		if(error&&error.responseJSON){
+    			$("#register_error").append("<li>"+error.responseJSON.errorMessage+"</li>");
+    		}
+    	});
+    	
+    });
 });
