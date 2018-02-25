@@ -345,8 +345,8 @@
 	                                <div class="md-form form-sm">
 	                                    <i class="fa fa-key prefix"></i>
 	                                    <input type="text" id="register_msg" name="register_msg" class="form-control" style="width: 60%">
-	                                    <label for="register_msg">短信验证码</label>
-	                                    <a id="msg-btn" href="#" class="btn btn-primary">获取验证码</a>
+	                                    <label id="validate_label" for="register_msg">短信验证码</label>
+	                                    <button id="msg-btn" class="btn btn-info">获取验证码</button>
 	                                </div>
 	                                <div class="md-form form-sm">
 	                                    <i class="fa fa-lock prefix"></i>
@@ -385,9 +385,6 @@
     <!--Modal: Login / Register Form-->
 
     <!-- SCRIPTS -->
-    <script type="text/javascript">
-    	var ContextPath = "${contextPath}";
-    </script>
     <!-- JQuery -->
     <script type="text/javascript" src="${framePath}/mdbootstrap/js/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap tooltips -->
@@ -403,6 +400,7 @@
     <!-- JQuery validate -->
     <script type="text/javascript" src="${framePath}/jquery-validation/dist/localization/messages_zh.js"></script>
     <!-- JQuery validate ZH-->
+    <script type="text/javascript" src="${jsPath}/setting.js"></script>
     <script type="text/javascript" src="${jsPath}/home.js"></script>
 </body>
 

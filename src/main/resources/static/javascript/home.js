@@ -57,12 +57,30 @@
     	var isValid = $("#register_from").validate().element("#regisetr_mobile");
     	if(isValid){
     		$.ajax({
-	    		url: ContextPath + '/user/smsRegister/'+$("#regisetr_mobile").val(),
+	    		url: SysMgt_Path + '/user/smsRegister/'+$("#regisetr_mobile").val(),
 	    		type: 'GET'
 	    	})
 	    	.done(function(result) {
 	    		if(result==="1"){
-	    			$("#msg_label").val("短信已发送，请查收！");
+	    			$("#validate_label" ).html("短信已发送，请查收！");
+	    			var timesRun = 60;
+					var interval = setInterval(function(){
+						timesRun -= 1;
+						$("#msg-btn").removeClass('btn-info');
+						$("#msg-btn").addClass('btn-blue-grey');
+						$("#msg-btn").prop('disabled', true);
+						$("#msg-btn").text("获取验证码("+timesRun+")")
+						if(timesRun === 0){
+							$("#msg-btn").prop('disabled', false);
+							$("#msg-btn").removeClass('btn-blue-grey');
+							$("#msg-btn").addClass('btn-info');	
+							$("#msg-btn").text("获取验证码");					
+							clearInterval(interval);
+						}						
+					}, 1000);
+	    		}else{
+	    			console.log($("#validate_label" ).html());
+	    			$("#validate_label" ).html(result);
 	    		}    		
 	    	})
     	}
