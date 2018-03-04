@@ -304,20 +304,25 @@
     
                             <!--Body-->
                             <div class="modal-body mb-1">
-                                <div class="md-form form-sm">
-                                    <i class="fa fa-mobile prefix"></i>
-                                    <input type="text" id="form22" class="form-control">
-                                    <label for="form22">您的手机号</label>
-                                </div>
-    
-                                <div class="md-form form-sm">
-                                    <i class="fa fa-lock prefix"></i>
-                                    <input type="password" id="form23" class="form-control">
-                                    <label for="form23">您的密码</label>
-                                </div>
-                                <div class="text-center mt-2">
-                                    <button class="btn btn-info">马上登录 <i class="fa fa-sign-in-alt ml-1"></i></button>
-                                </div>
+	                            <form id="login_from">
+	                                <div class="md-form form-sm">
+	                                    <i class="fa fa-mobile prefix"></i>
+	                                    <input id="login_mobile" name="login_mobile" type="text" id="form22" class="form-control">
+	                                    <label for="login_mobile">您的手机号</label>
+	                                </div>
+	    
+	                                <div class="md-form form-sm">
+	                                    <i class="fa fa-lock prefix"></i>
+	                                    <input id="login_pwd" name="login_pwd" type="password" id="form23" class="form-control">
+	                                    <label for="login_pwd">您的密码</label>
+	                                </div>
+	                                <div class="md-form form-sm">
+	                                    <ul id="login_error" style="color: red"></ul>
+	                                </div>
+	                                <div class="text-center mt-2">
+	                                    <button id="login-btn" class="btn btn-info">马上登录 <i class="fa fa-sign-in-alt ml-1"></i></button>
+	                                </div>
+	                            </form>
                             </div>
                             <!--Footer-->
                             <div class="modal-footer display-footer">

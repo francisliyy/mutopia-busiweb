@@ -16,13 +16,17 @@
                 showUserInformation();
             },
             error: function (jqXHR, textStatus, errorThrown) {
+            	alert(jqXHR.status);
+            	alert(isReg);
                 if (jqXHR.status === 401) {
                 	if(isReg){//register
                 		$('#register_error')
                 			.empty()
 	                        .html("<p>注册异常:<br>应用暂时无法访问</p>");
                 	}else{//log in
-
+                		$('#login_error')
+                			.empty()
+	                        .html("<p>登录异常:<br>用户名或密码错误</p>");
                 	}
                     
                 } else {
@@ -89,11 +93,11 @@
 	        required: "请输入短信验证码",
 	        rangelength: "请输入6位短信验证码"
 	      },
-	      password: {
+	      register_pwd: {
 	        required: "请输入密码",
 	        minlength: "密码长度不能小于 6 个字母"
 	      },
-	      confirm_password: {
+	      register_repwd: {
 	        required: "请输入密码",
 	        minlength: "密码长度不能小于 6 个字母",
 	        equalTo: "两次密码输入不一致"
@@ -148,9 +152,10 @@
     $("#register-btn").on('click', function(event) {
     	$("#register_error li").remove();
     	event.preventDefault();
-    	var param = {"mobile": $("#regisetr_mobile").val(),
-    			   "verifycode": $("#register_msg").val(),
-    			   "password": $("#register_pwd").val()};
+
+    	var param = {"mobile": $.trim($("#regisetr_mobile").val()),
+    			   "verifycode": $.trim($("#register_msg").val()),
+    			   "password": $.trim($("#register_pwd").val())};
     	$.ajax({
     		url: SysMgt_Path + '/user/initCreationFormByMobile',
     		type: 'POST',
@@ -164,7 +169,7 @@
     			console.log(result)
     			var logindata={
     				"username":result.mobile,
-    				"password":$("#register_pwd").val()
+    				"password":$.trim($("#register_pwd").val())
     			};
     			retrieveJwtToken(logindata,true);
     		}    		
@@ -175,5 +180,51 @@
     		}
     	});
     	
+    });
+
+    $("#login_from").validate({
+		debug:true,
+		rules: {
+	      login_mobile: {
+	        required: true,
+	        chinaMobile: true,
+	      },
+	      login_pwd: {
+	        required: true,
+	        minlength: 6
+	      }
+	    },
+	    messages: {
+	      login_mobile: {
+	        required: "(请输入中国大陆手机号)",
+	        chinaMobile: "(请输入11位中国大陆手机号)"
+	      },
+	      login_pwd: {
+	        required: "请输入密码",
+	        minlength: "密码长度不能小于 6 个字母"
+	      }
+	     },
+	    submitHandler:function(form){
+        },
+        errorPlacement: function(error, element) {
+			// Append error within linked label
+			$( element )
+				.closest( "form" )
+					.find( "label[for='" + element.attr( "id" ) + "']" )
+						.append(error.css('color', 'red'));
+		},
+		errorElement: "span",
+    });
+
+    $("#login-btn").on('click', function(event) {
+    	event.preventDefault();
+    	var isValid = $("#register_from").validate().element("#login_mobile")&&$("#register_from").validate().element("#login_pwd");
+    	if(isValid){
+    		var logindata={
+				"username":$.trim($("#login_mobile").val()),
+				"password":$.trim($("#login_pwd").val())
+			};
+			retrieveJwtToken(logindata,false);
+    	}    	
     });
 });
