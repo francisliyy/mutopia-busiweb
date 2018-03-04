@@ -1,5 +1,64 @@
 ;$(function(){
 
+	function retrieveJwtToken(loginData,isReg){
+		console.log(JSON.stringify(loginData));
+		$.ajax({
+            url: SysMgt_Path + "/auth",
+            type: "POST",
+            data: JSON.stringify(loginData),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data, textStatus, jqXHR) {
+                setJwtToken(data.token);
+                //$login.hide();
+                //$notLoggedIn.hide();
+                //showTokenInformation();
+                showUserInformation();
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                if (jqXHR.status === 401) {
+                	if(isReg){//register
+                		$('#register_error')
+                			.empty()
+	                        .html("<p>注册异常:<br>应用暂时无法访问</p>");
+                	}else{//log in
+
+                	}
+                    
+                } else {
+                    throw new Error("an unexpected error occured: " + errorThrown);
+                }
+            }
+        });
+	}
+
+	function showUserInformation() {
+        $.ajax({
+            url: SysMgt_Path + "/user/fromtoken",
+            type: "GET",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            headers: createAuthorizationTokenHeader(),
+            success: function (data, textStatus, jqXHR) {
+            	console.log(data);
+                /*var $userInfoBody = $userInfo.find("#userInfoBody");
+
+                $userInfoBody.append($("<div>").text("Username: " + data.username));
+                $userInfoBody.append($("<div>").text("Email: " + data.email));
+
+                var $authorityList = $("<ul>");
+                data.authorities.forEach(function (authorityItem) {
+                    $authorityList.append($("<li>").text(authorityItem.authority));
+                });
+                var $authorities = $("<div>").text("Authorities:");
+                $authorities.append($authorityList);
+
+                $userInfoBody.append($authorities);
+                $userInfo.show();*/
+            }
+        });
+    }
+
 	$("#register_from").validate({
 		debug:true,
 		rules: {
@@ -99,7 +158,16 @@
     		data: JSON.stringify(param),
     	})
     	.done(function(result) {
-    		typeof result === 'string' && $("#register_error").html(result);
+    		if(result === 'string'){
+    			$("#register_error").html(result);
+    		}else{
+    			console.log(result)
+    			var logindata={
+    				"username":result.mobile,
+    				"password":$("#register_pwd").val()
+    			};
+    			retrieveJwtToken(logindata,true);
+    		}    		
     	}).fail(function(error) {
     		console.log(error);
     		if(error&&error.responseJSON){
